@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ACC — Activate Conflict Cognition</title>
+<title>ACC - Activate Conflict Cognition</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -20,14 +20,12 @@
 body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:100vh}
 .app{max-width:800px;margin:0 auto;padding:32px 24px 60px}
 
-/* Header */
 .header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px}
 .logo{display:flex;align-items:baseline;gap:2px;font-size:28px;font-weight:700;letter-spacing:-0.5px}
 .logo span{color:var(--crimson)}
 .logo-sub{font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-secondary);margin-top:2px}
 .tagline{font-size:13px;color:var(--text-secondary);font-style:italic;text-align:right;max-width:200px;line-height:1.5}
 
-/* Step bar */
 .step-bar{display:flex;align-items:center;margin-bottom:22px;overflow-x:auto}
 .step-dot{width:8px;height:8px;border-radius:50%;background:var(--border);flex-shrink:0;transition:background .3s}
 .step-dot.active{background:var(--crimson)}
@@ -38,21 +36,17 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .step-line{width:18px;height:1px;background:var(--border);margin:0 5px;flex-shrink:0;transition:background .3s}
 .step-line.active{background:var(--crimson)}
 
-/* Cards */
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px;margin-bottom:14px;animation:fadeUp .3s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* Step number */
 .step-num{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .step-num-circle{width:24px;height:24px;border-radius:50%;background:var(--card-inner);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
 .step-num-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-secondary);font-weight:600}
 .ai-badge{margin-left:auto;background:var(--dark);color:#fff;font-size:9px;font-weight:700;border-radius:5px;padding:2px 8px;letter-spacing:0.04em}
 
-/* Typography */
 .card-title{font-family:var(--serif);font-size:20px;font-weight:700;line-height:1.3;margin-bottom:6px}
 .card-desc{font-size:13px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px}
 
-/* Form */
 .field{margin-bottom:12px}
 .field-label{display:block;font-size:10px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);font-weight:600;margin-bottom:5px}
 .field-input,.field-textarea{width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:var(--radius-sm);font-size:13px;font-family:var(--sans);background:var(--card-inner);color:var(--text);outline:none;transition:border-color .2s}
@@ -60,7 +54,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .field-textarea{resize:vertical;min-height:58px}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 
-/* Buttons */
 .btn-row{display:flex;gap:8px;margin-top:18px;align-items:center}
 .btn{padding:9px 20px;border-radius:var(--radius-sm);font-size:13px;font-weight:600;font-family:var(--sans);cursor:pointer;border:none;transition:all .15s}
 .btn-primary{background:var(--crimson);color:#fff}
@@ -68,45 +61,37 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .btn-secondary{background:transparent;color:var(--text-secondary);border:1px solid var(--border)}
 .btn-secondary:hover{background:var(--card-inner)}
 
-/* Highlight */
 .highlight{border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:10px 14px;margin-bottom:12px}
 .highlight-pink{background:var(--crimson-light);border-left:3px solid var(--crimson)}
 .highlight-label{font-size:9px;letter-spacing:0.08em;text-transform:uppercase;font-weight:700;margin-bottom:3px;color:var(--crimson)}
 .highlight-text{font-size:13px;font-style:italic;line-height:1.5}
 
-/* Warning */
 .warning{background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--radius-sm);padding:9px 12px;font-size:12px;color:var(--amber-text);display:flex;align-items:flex-start;gap:7px;margin-bottom:12px}
 
-/* Pink field */
 .pink-field{background:var(--crimson-light);border:1px solid var(--crimson-border);border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:12px}
 .pink-field .field-label{color:var(--crimson)}
 .pink-field .field-textarea{border-color:var(--crimson-border);background:#fff}
 
-/* Crack cards — fixed, no checkbox */
 .crack{border:1px solid var(--crimson-border);border-radius:var(--radius);padding:14px 16px;margin-bottom:8px;background:var(--crimson-light)}
 .crack-header{display:flex;align-items:center;gap:8px;margin-bottom:6px}
 .crack-type{font-size:9px;font-weight:700;letter-spacing:0.07em;color:#fff;background:var(--crimson);border-radius:3px;padding:2px 7px}
 .crack-title{font-size:13px;font-weight:600;line-height:1.4;margin-bottom:3px;color:var(--text)}
 .crack-desc{font-size:11px;color:var(--text-secondary);line-height:1.5}
 
-/* Archetype conflict banner */
 .archetype-conflict-banner{background:#0f0f11;border:1px solid #2a2a2e;border-radius:var(--radius);padding:16px 18px;margin-bottom:12px}
 .acb-pill{background:var(--crimson);color:#fff;font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:4px;padding:3px 9px;white-space:nowrap;flex-shrink:0}
 .acb-name{font-size:14px;font-weight:700;color:#fff}
 
-/* Popped campaign context */
 .context-box{border:2px solid var(--crimson);border-radius:var(--radius);padding:16px 18px;margin-bottom:14px;background:#fff;position:relative}
 .context-box-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;color:var(--crimson);margin-bottom:12px;display:flex;align-items:center;gap:6px}
 .context-box-label::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--crimson)}
 .context-note{font-size:11px;color:var(--text-secondary);line-height:1.5;background:var(--crimson-light);border-radius:var(--radius-sm);padding:8px 10px;margin-top:10px;border:1px solid var(--crimson-border)}
 .section-label{font-size:10px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text-secondary);font-weight:600;margin:14px 0 8px}
 
-/* Confirm buttons */
 .confirm-row{display:flex;gap:8px;margin-top:8px}
 .btn-confirm{display:inline-flex;align-items:center;gap:5px;background:var(--card-inner);border:1px solid var(--border);border-radius:var(--radius-sm);padding:7px 14px;font-size:12px;font-weight:600;font-family:var(--sans);cursor:pointer;transition:all .15s}
 .btn-confirm:hover{border-color:var(--crimson);background:var(--crimson-light)}
 
-/* File upload */
 .upload-zone{border:2px dashed var(--border);border-radius:var(--radius-sm);padding:20px;text-align:center;cursor:pointer;transition:all .2s;margin-top:6px;background:var(--card-inner)}
 .upload-zone:hover{border-color:var(--crimson);background:var(--crimson-light)}
 .upload-icon{font-size:22px;margin-bottom:6px}
@@ -115,7 +100,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .upload-sub{font-size:11px;color:var(--text-muted);margin-top:3px}
 .upload-file-tag{display:inline-flex;align-items:center;gap:6px;background:#E8F5E9;border:1px solid #A5D6A7;border-radius:var(--radius-sm);padding:5px 12px;margin-top:10px;font-size:12px;color:#2E7D32;font-weight:500}
 
-/* Dark summary panel */
 .dark-panel{background:#0f0f11;border:1px solid #2a2a2e;color:#e8e8e8;border-radius:var(--radius);padding:20px;margin-bottom:14px}
 .dp-meta{font-size:10px;color:#555;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:12px}
 .dp-archetype{display:flex;align-items:flex-start;gap:10px;background:#1c1c20;border-radius:var(--radius-sm);padding:12px 14px;margin-bottom:10px;border:1px solid #2d2d32}
@@ -129,7 +113,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .dp-belief-label{font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:#555;margin-bottom:4px}
 .dp-belief-text{font-size:13px;font-style:italic;color:#c8c8c8;line-height:1.5}
 
-/* Campaign Sequence */
 .seq-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;margin-bottom:14px}
 .seq-phase{display:flex;gap:14px}
 .seq-phase-col{width:24px;display:flex;flex-direction:column;align-items:center;flex-shrink:0}
@@ -145,7 +128,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .seq-rationale-label{font-size:9px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;color:var(--crimson);margin-bottom:3px}
 .seq-rationale-text{font-size:11px;color:var(--text-secondary);line-height:1.5}
 
-/* Touchpoint accordion */
 .tp-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin-bottom:14px;overflow:hidden}
 .tp-card-header{padding:16px 22px 12px;border-bottom:1px solid var(--border)}
 .tp-card-title{font-size:15px;font-weight:600;margin-bottom:3px}
@@ -165,7 +147,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .tp-item-time{font-size:10px;color:var(--crimson);font-weight:600;margin-bottom:4px}
 .tp-item-how{font-size:11px;color:var(--text-secondary);line-height:1.55}
 
-/* Feedback panel */
 .feedback-panel{border:2px solid var(--crimson);border-radius:var(--radius);padding:18px 20px;margin-bottom:14px}
 .feedback-header{display:flex;align-items:center;gap:8px;margin-bottom:5px}
 .feedback-title{font-size:14px;font-weight:600}
@@ -181,7 +162,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 .editable-area{border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;min-height:110px;font-size:12px;font-family:var(--sans);line-height:1.6;color:var(--text);background:var(--card-inner);outline:none}
 .editable-area:focus{border-color:var(--crimson)}
 
-/* Visibility */
 .step-container{display:none}
 .step-container.visible{display:block}
 </style>
@@ -207,7 +187,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div class="step-num-label">The ICP</div>
       </div>
       <div class="card-title">Who are you trying to reach, and what are they currently doing?</div>
-      <div class="card-desc">Not demographics — behaviour. What are they doing right now to solve the problem your product solves? This is what the belief is built on.</div>
+      <div class="card-desc">Not demographics, but behaviour. What are they doing right now to solve the problem your product solves? This is what the belief is built on.</div>
       <div class="field-row">
         <div class="field">
           <label class="field-label">Role & seniority</label>
@@ -220,7 +200,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
       </div>
       <div class="field">
         <label class="field-label">What products/services are they currently using to solve the problem?</label>
-        <textarea class="field-textarea" rows="3">Gainsight for health scoring, Salesforce for account tracking, internal spreadsheets for manual risk reviews, QBR decks to assess engagement — all usage-based signals.</textarea>
+        <textarea class="field-textarea" rows="3">Gainsight for health scoring, Salesforce for account tracking, internal spreadsheets for manual risk reviews, QBR decks to assess engagement, all usage-based signals.</textarea>
       </div>
       <div class="btn-row">
         <button class="btn btn-primary" onclick="goTo(1)">Continue →</button>
@@ -235,15 +215,15 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div class="step-num-circle">2</div>
         <div class="step-num-label">The Product</div>
       </div>
-      <div class="card-title">What does your product specifically resolve — and why is it credible to deliver on a belief crack?</div>
-      <div class="card-desc">Not your value proposition. The specific mechanism that makes the crack commercially relevant — not just interesting.</div>
+      <div class="card-title">What does your product specifically resolve, and why is it credible to deliver on a belief crack?</div>
+      <div class="card-desc">Not your value proposition. The specific mechanism that makes the crack commercially relevant, not just interesting.</div>
       <div class="field">
         <label class="field-label">Product name & what it does</label>
-        <input class="field-input" value="ChurnRadar — tracks internal relationship health and stakeholder changes across B2B accounts in real time.">
+        <input class="field-input" value="ChurnShield: helps CS teams detect early warning signs of churn so they can intervene before it's too late.">
       </div>
       <div class="field">
         <label class="field-label">What is your product's USP/POD?</label>
-        <textarea class="field-textarea" rows="3">Unlike Gainsight's usage-based health scores, ChurnRadar monitors champion identity, role changes, and internal relationship depth — the signals that precede churn months before usage ever drops.</textarea>
+        <textarea class="field-textarea" rows="3">Instead of monitoring usage, ChurnShield tracks whether the champion is still in the seat. It detects champion departures, role changes, and relationship decay. These are the signals that precede churn months before usage ever drops.</textarea>
       </div>
       <div class="btn-row">
         <button class="btn btn-primary" onclick="goTo(2)">Continue →</button>
@@ -260,24 +240,24 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div class="step-num-label">Campaign Context</div>
       </div>
       <div class="card-title">What are you trying to achieve with this campaign?</div>
-      <div class="card-desc">This drives everything — the archetype AI selects, the conflict types it applies, and the sequence it recommends. Be specific about where the pipeline actually is.</div>
+      <div class="card-desc">This drives everything: which barriers AI detects, which conflict types it applies, and the strategy it recommends. Be specific about where the pipeline actually is.</div>
       <div class="field">
         <label class="field-label">Which stage(s) of the funnel?</label>
         <input class="field-input" value="Top-of-funnel awareness + pipeline acceleration (existing pipeline stalling at evaluation stage)">
       </div>
       <div class="field">
         <label class="field-label">Objective for this strategy?</label>
-        <input class="field-input" value="Break complacency — shift VPs from 'we already track this' to 'we have a gap we didn't know about'">
+        <input class="field-input" value="Break complacency. Shift VPs from 'we already track this' to 'we're tracking the wrong metric'">
       </div>
       <div class="field">
         <label class="field-label">Who is making the final purchase decision?</label>
-        <input class="field-input" value="VP of Customer Success — owns the CS tech budget, reports to CRO">
+        <input class="field-input" value="VP of Customer Success, owns the CS tech budget, reports to CRO">
       </div>
       <div class="field" style="margin-bottom:0">
         <label class="field-label">Any constraints on channels or budget? <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-muted)">(optional)</span></label>
         <input class="field-input" placeholder="e.g. No outbound SDR, digital-only, EMEA focus...">
       </div>
-      <div class="context-note" style="margin-top:12px">→ AI uses this to select the campaign archetype and determine which conflict types apply — before analysing your data for specific belief cracks.</div>
+      <div class="context-note" style="margin-top:12px">→ AI uses this to detect which cognitive barriers are present and determine which conflict types apply, before analysing your data for specific belief cracks.</div>
       <div class="btn-row">
         <button class="btn btn-primary" onclick="goTo(3)">Continue →</button>
         <button class="btn btn-secondary" onclick="goTo(1)">← Back</button>
@@ -296,26 +276,26 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
       <div class="card-desc">Win/loss patterns, customer quotes, benchmarks, observed behaviour. The more specific, the sharper the output.</div>
       <div class="warning">
         <span>⚠</span>
-        <span>Each data point must be verifiable — specific enough that the buyer cannot dismiss it as general industry noise.</span>
+        <span>Each data point must be verifiable, specific enough that the buyer cannot dismiss it as general industry noise.</span>
       </div>
       <div class="pink-field">
         <label class="field-label">What buyers don't know about your product</label>
-        <textarea class="field-textarea" rows="2">Buyers evaluate ChurnRadar as a usage analytics add-on. They don't realise the champion-tracking module is what predicts churn earliest — the feature nobody asks about in demos but the one that drives every retention win.</textarea>
+        <textarea class="field-textarea" rows="2">Buyers evaluate ChurnShield as a usage analytics add-on. They don't realise the champion-tracking module is what predicts churn earliest. The feature nobody asks about in demos but the one that drives every retention win.</textarea>
       </div>
       <div class="field-row">
         <div class="field">
           <label class="field-label">Win / loss patterns</label>
-          <textarea class="field-textarea" rows="3">68% of churned accounts showed no meaningful usage drop in the 90 days before cancellation. In 71% of churned deals, the original champion had left or changed roles in the prior 6 months.</textarea>
+          <textarea class="field-textarea" rows="3">68% of churned accounts showed no meaningful usage drop in the 90 days before cancellation. They didn't stop logging in. They lost the internal champion who bought the product.</textarea>
         </div>
         <div class="field">
           <label class="field-label">Customer quotes</label>
-          <textarea class="field-textarea" rows="3">"We didn't churn because the product stopped working. We churned because the person who championed it left and nobody picked it up internally." — Head of CS, mid-market SaaS</textarea>
+          <textarea class="field-textarea" rows="3">"We didn't churn because the product stopped working. We churned because the person who championed it left and nobody picked it up internally." (Head of CS, mid-market SaaS)</textarea>
         </div>
       </div>
       <div class="field-row">
         <div class="field">
           <label class="field-label">Industry benchmarks</label>
-          <textarea class="field-textarea" rows="3">Average B2B champion tenure is 18 months. Average SaaS contract length is 24 months. Most accounts lose their champion before renewal — silently, with no signal in the usage data.</textarea>
+          <textarea class="field-textarea" rows="3">Average B2B champion tenure is 18 months. Average SaaS contract length is 24 months. Most accounts lose their champion before renewal, silently, with no signal in the usage data.</textarea>
         </div>
         <div class="field">
           <label class="field-label">Observed behaviour</label>
@@ -324,7 +304,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
       </div>
       <div class="field">
         <label class="field-label">Anything else</label>
-        <textarea class="field-textarea" rows="2">Champion turnover predicts churn 2.3× more accurately than usage metrics in accounts over $50k ARR. This correlation holds across 4 industries in our internal dataset of 400+ accounts.</textarea>
+        <textarea class="field-textarea" rows="2">Instead of monitoring usage, CS teams should be tracking whether the champion is still in the seat. Usage looks stable. But customers still churn when the champion leaves.</textarea>
       </div>
       <div class="btn-row">
         <button class="btn btn-primary" onclick="goTo(4)">Continue →</button>
@@ -385,10 +365,10 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div class="ai-badge">AI</div>
       </div>
       <div class="card-title">What is your buyer most certain about right now?</div>
-      <div class="card-desc">Surfaced from their behaviour and your data — the belief underlying everything they currently do. System 1 is protecting this. Edit it if your market knowledge says otherwise.</div>
+      <div class="card-desc">Surfaced from their behaviour and your data. The belief underlying everything they currently do. System 1 is protecting this. Edit it if your market knowledge says otherwise.</div>
       <div class="highlight highlight-pink">
         <div class="highlight-label">Surfaced from ICP behaviour + data</div>
-        <div class="highlight-text">"We can predict and prevent churn by tracking how actively customers use our product — low usage is the signal, re-engagement is the fix."</div>
+        <div class="highlight-text">"Your CS team is tracking the wrong metric. Low usage is not the churn signal. Losing the internal champion who bought the product is."</div>
       </div>
       <div style="font-size:12px;color:var(--text-secondary);margin-bottom:10px">Does this match what your ICP is most certain about?</div>
       <div class="confirm-row">
@@ -411,9 +391,8 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div class="ai-badge">AI</div>
       </div>
       <div class="card-title">Where does reality contradict this belief?</div>
-      <div class="card-desc">AI has analysed your ICP, data, and campaign context — and surfaced the conflicts that apply to this archetype.</div>
+      <div class="card-desc">AI has analysed your ICP, data, and campaign context and surfaced the conflicts based on the barriers detected.</div>
 
-      <!-- Campaign context read-only summary -->
       <div class="context-box" style="margin-bottom:14px">
         <div class="context-box-label">Campaign context</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
@@ -423,58 +402,60 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
           </div>
           <div>
             <div style="font-size:10px;letter-spacing:0.07em;text-transform:uppercase;color:var(--crimson);font-weight:600;margin-bottom:3px">Objective</div>
-            <div style="font-size:12px;color:var(--text);line-height:1.45">Break complacency — shift VPs from 'we already track this' to 'we have a gap'</div>
+            <div style="font-size:12px;color:var(--text);line-height:1.45">Break complacency. Shift VPs from 'we already track this' to 'we're tracking the wrong metric'</div>
           </div>
         </div>
-        <div class="context-note">→ Based on this context, AI has selected the conflict types most likely to move this specific archetype at this funnel stage.</div>
+        <div class="context-note">→ Based on this context, AI has selected the conflict types most likely to overcome the detected barriers at this funnel stage.</div>
       </div>
 
       <div class="highlight highlight-pink">
         <div class="highlight-label">Settled belief being targeted</div>
-        <div class="highlight-text">"We can predict and prevent churn by tracking how actively customers use our product — low usage is the signal, re-engagement is the fix."</div>
+        <div class="highlight-text">"Your CS team is tracking the wrong metric. Low usage is not the churn signal. Losing the internal champion who bought the product is."</div>
       </div>
 
-      <!-- Archetype conflict banner -->
       <div class="archetype-conflict-banner">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
           <div style="display:flex;align-items:center;gap:8px">
-            <div class="acb-pill">Archetype</div>
-            <div class="acb-name">The Complacent Incumbent</div>
+            <div class="acb-pill">Barriers Detected</div>
+            <div class="acb-name">All 3 barriers present</div>
           </div>
           <div style="display:flex;align-items:center;gap:5px;background:#D6244D22;border:1px solid #D6244D55;border-radius:4px;padding:3px 9px">
             <span style="font-size:9px;color:#ff6b8a">●</span>
             <span style="font-size:9px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:#ff9ab0">AI Analysis Complete</span>
           </div>
         </div>
-        <div style="font-size:12px;line-height:1.6;color:#bbb;margin-bottom:10px">Aware of the category, believes their current stack is sufficient. All three conflict types are required — this is the hardest awareness case.</div>
+        <div style="font-size:12px;line-height:1.6;color:#bbb;margin-bottom:12px">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="color:#ff6b8a;font-size:10px">✕</span><span>Not actively looking: buyer is not scanning for solutions in this space</span></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px"><span style="color:#ff6b8a;font-size:10px">✕</span><span>No personal urgency to change: believes status quo is good enough</span></div>
+          <div style="display:flex;align-items:center;gap:8px"><span style="color:#ff6b8a;font-size:10px">✕</span><span>Strong blocking belief: "usage data tells us who will churn"</span></div>
+        </div>
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
           <span style="background:var(--crimson);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.06em;border-radius:4px;padding:4px 10px">NOVELTY</span>
           <span style="color:#666;font-size:12px">+</span>
           <span style="background:var(--crimson);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.06em;border-radius:4px;padding:4px 10px">REFLECTION</span>
           <span style="color:#666;font-size:12px">+</span>
           <span style="background:var(--crimson);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.06em;border-radius:4px;padding:4px 10px">DISFLUENCY</span>
-          <span style="font-size:11px;color:#888;margin-left:4px">— must interrupt, personalise, then crack the blocking belief.</span>
         </div>
       </div>
 
-      <div class="section-label">Which conflicts apply to this archetype</div>
+      <div class="section-label">Recommended conflicts based on barriers detected</div>
 
       <div class="crack">
         <div class="crack-header"><div class="crack-type">NOVELTY</div></div>
-        <div class="crack-title">The average B2B account loses its original champion within 18 months — before most contracts renew — and CS teams have no system to detect this until it's too late.</div>
+        <div class="crack-title">The average B2B account loses its original champion within 18 months, before most contracts renew, and CS teams have no system to detect this until it's too late.</div>
         <div class="crack-desc">Introduces a dimension the buyer has no current framework for. They cannot file this under "things we already track" because champion-tracking isn't in their stack.</div>
       </div>
 
       <div class="crack">
         <div class="crack-header"><div class="crack-type">REFLECTION</div></div>
         <div class="crack-title">CS teams know the last login date for every account. Fewer than 10% can name who currently owns the vendor relationship internally in their top 20 accounts.</div>
-        <div class="crack-desc">Exposes the gap between what CS teams believe they know and what they actually know. The gap is already half-sensed — this makes it personally undeniable.</div>
+        <div class="crack-desc">Exposes the gap between what CS teams believe they know and what they actually know. The gap is already half-sensed. This makes it personally undeniable.</div>
       </div>
 
       <div class="crack">
         <div class="crack-header"><div class="crack-type">DISFLUENCY</div></div>
-        <div class="crack-title">Champion turnover predicts churn 2.3× more accurately than usage drop — yet 68% of churned accounts showed normal usage in the 90 days before cancellation.</div>
-        <div class="crack-desc">Directly contradicts the usage-as-signal belief with a specific, verifiable metric. The buyer's current approach is measuring the wrong signal entirely.</div>
+        <div class="crack-title">68% of churned accounts showed no meaningful usage drop in the 90 days before cancellation. They didn't stop logging in. They lost the internal champion who bought the product.</div>
+        <div class="crack-desc">Directly contradicts the usage-as-signal belief. Usage looks stable, but customers still churn. The buyer's current approach is tracking the wrong metric entirely.</div>
       </div>
 
       <div class="btn-row">
@@ -488,35 +469,35 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
   <div class="step-container" id="step-7">
 
     <div class="dark-panel">
-      <div class="dp-meta">ACC Campaign Strategy · ChurnRadar → VP of Customer Success</div>
+      <div class="dp-meta">ACC Campaign Strategy · ChurnShield → VP of Customer Success</div>
       <div class="dp-archetype">
-        <div class="dp-arch-pill">Archetype</div>
+        <div class="dp-arch-pill">Barriers</div>
         <div>
-          <div class="dp-arch-name">The Complacent Incumbent</div>
-          <div class="dp-arch-desc">Strong blocking belief, low urgency. Requires all three conflict types in sequence: Novelty → Reflection → Disfluency. The product only appears in Phase 3.</div>
+          <div class="dp-arch-name">All 3 barriers detected</div>
+          <div class="dp-arch-desc">Not actively looking · No personal urgency · Strong blocking belief. Requires all three conflict types: Novelty → Reflection → Disfluency. The product only appears in Phase 3.</div>
         </div>
       </div>
       <div class="dp-onetofive">
         <div class="dp-onetofive-icon">⚡</div>
         <div>
           <div class="dp-onetofive-label">1-in-5 Rule</div>
-          <div class="dp-onetofive-text">1 to 2 out of every 5 touchpoints should carry conflict. Too little (0/5) and System 1 filters you out — no belief is challenged. Too much (3+/5) and conflict becomes a pattern System 1 learns to skip. The sweet spot creates enough friction to activate System 2, while fluent content resolves the tension.</div>
+          <div class="dp-onetofive-text">1 to 2 out of every 5 touchpoints should carry conflict. Too little (0/5) and System 1 filters you out. No belief is challenged. Too much (3+/5) and conflict becomes a pattern System 1 learns to skip. The sweet spot creates enough friction to activate System 2, while fluent content resolves the tension.</div>
         </div>
       </div>
       <div class="dp-belief-label">The settled belief being targeted</div>
-      <div class="dp-belief-text">"We can predict and prevent churn by tracking how actively customers use our product — low usage is the signal, re-engagement is the fix."</div>
+      <div class="dp-belief-text">"Your CS team is tracking the wrong metric. Low usage is not the churn signal. Losing the internal champion who bought the product is."</div>
     </div>
 
     <div class="seq-card">
       <div style="font-size:15px;font-weight:600;margin-bottom:4px">Campaign sequence</div>
-      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;line-height:1.5">The order matters. Each crack is carried by all its touchpoints before the next crack begins — repetition across channels is what shifts the belief, not a single exposure.</div>
+      <div style="font-size:12px;color:var(--text-secondary);margin-bottom:16px;line-height:1.5">The order matters. Each crack is carried by all its touchpoints before the next crack begins. Repetition across channels is what shifts the belief, not a single exposure.</div>
 
       <div class="seq-phase">
         <div class="seq-phase-col"><div class="seq-phase-num">1</div><div class="seq-phase-line"></div></div>
         <div class="seq-phase-body">
           <div class="seq-phase-type">NOVELTY</div>
           <div class="seq-phase-title">Open the blind spot</div>
-          <div class="seq-phase-desc">Introduce the 18-month champion tenure gap — a dimension their current stack has no category for. The buyer now has a new problem they didn't know existed. No product mention anywhere in Phase 1.</div>
+          <div class="seq-phase-desc">Introduce the 18-month champion tenure gap, a dimension their current stack has no category for. The buyer now has a new problem they didn't know existed. No product mention anywhere in Phase 1.</div>
           <div class="seq-tags"><span class="seq-tag">📧 Email nurture</span><span class="seq-tag">🎙 Webinar</span><span class="seq-tag">🌐 SEO landing page</span></div>
         </div>
       </div>
@@ -526,7 +507,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div class="seq-phase-body">
           <div class="seq-phase-type">REFLECTION</div>
           <div class="seq-phase-title">Make it personally confrontable</div>
-          <div class="seq-phase-desc">Surface the gap they already half-know: they track logins, not people. By this point the belief is unstable — this step makes it impossible to ignore in their own accounts.</div>
+          <div class="seq-phase-desc">Surface the gap they already half-know: they track logins, not people. By this point the belief is unstable. This step makes it impossible to ignore in their own accounts.</div>
           <div class="seq-tags"><span class="seq-tag">👥 CS peer community</span><span class="seq-tag">🏢 Executive roundtable</span><span class="seq-tag">🔍 Account diagnostic tool</span></div>
         </div>
       </div>
@@ -536,44 +517,44 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div class="seq-phase-body" style="padding-bottom:0">
           <div class="seq-phase-type">DISFLUENCY</div>
           <div class="seq-phase-title">Deliver the data verdict</div>
-          <div class="seq-phase-desc">Land the 2.3× stat now — it hits a cracked belief, not an intact one. The product can appear here: not as an interruption but as the obvious answer to a problem they now fully own.</div>
+          <div class="seq-phase-desc">Land the 68% stat now. Usage looks stable, but customers still churn. The product can appear here: not as an interruption but as the obvious answer. Instead of monitoring usage, they should be tracking whether the champion is still in the seat.</div>
           <div class="seq-tags"><span class="seq-tag">📝 LinkedIn thought leadership</span><span class="seq-tag">📊 Benchmark report</span><span class="seq-tag">📱 Paid dark social</span></div>
         </div>
       </div>
 
       <div class="seq-rationale" style="margin-top:16px">
-        <div class="seq-rationale-label">Why this order — Complacent Incumbent</div>
-        <div class="seq-rationale-text">This archetype has a strong belief and zero urgency. Disfluency alone can't land first — they'll dismiss a stat when they're confident the status quo works. Novelty opens a gap they can't categorise, Reflection makes it personal and undeniable, then Disfluency closes the loop with proof at the moment they're most receptive to being wrong.</div>
+        <div class="seq-rationale-label">Why this order</div>
+        <div class="seq-rationale-text">All three barriers are present: the buyer isn't looking, feels no urgency, and holds a strong belief. Disfluency alone can't land first. They'll dismiss the 68% stat when they're confident their usage data works. Novelty opens a gap they can't categorise, Reflection makes it personal and undeniable, then Disfluency closes the loop with proof at the moment they're most receptive to being wrong.</div>
       </div>
     </div>
 
     <div class="tp-card">
       <div class="tp-card-header">
         <div class="tp-card-title">Strategic touchpoint map</div>
-        <div class="tp-card-desc">Each tab = one crack phase. Every touchpoint in a tab carries the same contradiction — the channel changes, the message doesn't. Select a phase to see how to deploy it.</div>
+        <div class="tp-card-desc">Each tab = one crack phase. Every touchpoint in a tab carries the same contradiction. The channel changes, the message doesn't. Select a phase to see how to deploy it.</div>
       </div>
       <div class="tp-tabs">
-        <button class="tp-tab active" onclick="switchTpTab(this,'tp-novelty')">① NOVELTY — Phase 1</button>
-        <button class="tp-tab" onclick="switchTpTab(this,'tp-reflection')">② REFLECTION — Phase 2</button>
-        <button class="tp-tab" onclick="switchTpTab(this,'tp-disfluency')">③ DISFLUENCY — Phase 3</button>
+        <button class="tp-tab active" onclick="switchTpTab(this,'tp-novelty')">① NOVELTY · Phase 1</button>
+        <button class="tp-tab" onclick="switchTpTab(this,'tp-reflection')">② REFLECTION · Phase 2</button>
+        <button class="tp-tab" onclick="switchTpTab(this,'tp-disfluency')">③ DISFLUENCY · Phase 3</button>
       </div>
       <div class="tp-panel active" id="tp-novelty">
-        <div class="tp-panel-intro">Idea carried across all Phase 1 channels: <strong>"The average B2B account loses its champion within 18 months — and there's no system to catch it."</strong> No product mention in any Phase 1 asset.</div>
+        <div class="tp-panel-intro">Idea carried across all Phase 1 channels: <strong>"The average B2B account loses its champion within 18 months, and there's no system to catch it."</strong> No product mention in any Phase 1 asset.</div>
         <div class="tp-item"><div class="tp-item-icon">📧</div><div><div class="tp-item-name">Email nurture sequence</div><div class="tp-item-time">Weeks 3–5</div><div class="tp-item-how">3-email series. Email 1: surfaces the 18-month stat, names the problem. Email 2: walks through what happens at renewal when the champion is already gone. Email 3: asks "does your stack flag this?" CTA leads to the webinar, not a demo.</div></div></div>
-        <div class="tp-item"><div class="tp-item-icon">🎙</div><div><div class="tp-item-name">Webinar: The hidden churn signal</div><div class="tp-item-time">Weeks 4–6</div><div class="tp-item-how">Peer-led format with a CS VP as host — not a vendor presenter. No product demo. Sole job: make champion tracking feel like a gap the audience should already have solved. Ends with the free diagnostic tool as the next step.</div></div></div>
-        <div class="tp-item"><div class="tp-item-icon">🌐</div><div><div class="tp-item-name">SEO landing page: "Champion churn"</div><div class="tp-item-time">Always-on</div><div class="tp-item-how">Built around the search term "champion churn" — not the product name. Captures organic traffic from buyers already sensing this problem. Leads to the benchmark report. No product pitch above the fold.</div></div></div>
+        <div class="tp-item"><div class="tp-item-icon">🎙</div><div><div class="tp-item-name">Webinar: The hidden churn signal</div><div class="tp-item-time">Weeks 4–6</div><div class="tp-item-how">Peer-led format with a CS VP as host, not a vendor presenter. No product demo. Sole job: make champion tracking feel like a gap the audience should already have solved. Ends with the free diagnostic tool as the next step.</div></div></div>
+        <div class="tp-item"><div class="tp-item-icon">🌐</div><div><div class="tp-item-name">SEO landing page: "Champion churn"</div><div class="tp-item-time">Always-on</div><div class="tp-item-how">Built around the search term "champion churn", not the product name. Captures organic traffic from buyers already sensing this problem. Leads to the benchmark report. No product pitch above the fold.</div></div></div>
       </div>
       <div class="tp-panel" id="tp-reflection">
         <div class="tp-panel-intro">Idea carried across all Phase 2 channels: <strong>"CS teams track logins, not people. The gap between what they think they know and what they actually know is already there."</strong></div>
-        <div class="tp-item"><div class="tp-item-icon">👥</div><div><div class="tp-item-name">CS peer community</div><div class="tp-item-time">Weeks 5–8</div><div class="tp-item-how">Post the "name your champion" provocation into CS Slack communities and LinkedIn groups — as a genuine question from a practitioner, not a brand thread. Peer-to-peer framing is harder to dismiss. No links to product.</div></div></div>
-        <div class="tp-item"><div class="tp-item-icon">🏢</div><div><div class="tp-item-name">Executive roundtable</div><div class="tp-item-time">Month 2</div><div class="tp-item-how">Invite VPs to a peer discussion framed around "retention visibility gaps." Facilitate — don't present. The product surfaces at the close, only after the gap has been acknowledged in the room by peers.</div></div></div>
-        <div class="tp-item"><div class="tp-item-icon">🔍</div><div><div class="tp-item-name">Interactive account diagnostic</div><div class="tp-item-time">Always-on</div><div class="tp-item-how">Self-serve tool: "Can you name the current champion in your top 20 accounts?" Most can't complete it. Generates a personalised gap report — and a natural handoff to the product as the obvious answer.</div></div></div>
+        <div class="tp-item"><div class="tp-item-icon">👥</div><div><div class="tp-item-name">CS peer community</div><div class="tp-item-time">Weeks 5–8</div><div class="tp-item-how">Post the "name your champion" provocation into CS Slack communities and LinkedIn groups, as a genuine question from a practitioner, not a brand thread. Peer-to-peer framing is harder to dismiss. No links to product.</div></div></div>
+        <div class="tp-item"><div class="tp-item-icon">🏢</div><div><div class="tp-item-name">Executive roundtable</div><div class="tp-item-time">Month 2</div><div class="tp-item-how">Invite VPs to a peer discussion framed around "retention visibility gaps." Facilitate, don't present. The product surfaces at the close, only after the gap has been acknowledged in the room by peers.</div></div></div>
+        <div class="tp-item"><div class="tp-item-icon">🔍</div><div><div class="tp-item-name">Interactive account diagnostic</div><div class="tp-item-time">Always-on</div><div class="tp-item-how">Self-serve tool: "Can you name the current champion in your top 20 accounts?" Most can't complete it. Generates a personalised gap report, and a natural handoff to the product as the obvious answer.</div></div></div>
       </div>
       <div class="tp-panel" id="tp-disfluency">
-        <div class="tp-panel-intro">Idea carried across all Phase 3 channels: <strong>"Champion turnover predicts churn 2.3× more accurately than usage drop."</strong> This data lands now — on a cracked belief — which is why it sticks here but would have bounced in Phase 1.</div>
-        <div class="tp-item"><div class="tp-item-icon">📝</div><div><div class="tp-item-name">LinkedIn thought leadership</div><div class="tp-item-time">Weeks 8–10</div><div class="tp-item-how">Publish the 2.3× stat as a standalone post — authored by a company leader or CS practitioner. Framed as an industry observation, not a pitch. Product mentioned once in comments only.</div></div></div>
-        <div class="tp-item"><div class="tp-item-icon">📊</div><div><div class="tp-item-name">Benchmark report</div><div class="tp-item-time">Weeks 9–11</div><div class="tp-item-how">Gate a 4-page data brief showing usage-vs-champion churn divergence across 400+ accounts. Gives the 2.3× stat credibility and a reason to share internally with CFO or CRO. Product intro appears on the final page — naturally earned.</div></div></div>
-        <div class="tp-item"><div class="tp-item-icon">📱</div><div><div class="tp-item-name">Paid dark social</div><div class="tp-item-time">Weeks 8–12</div><div class="tp-item-how">Retarget CS leader communities on LinkedIn with the 2.3× stat as ad creative — no product branding on the first ad. Second ad CTA: the diagnostic tool. Frequency across contexts makes a stat feel like received wisdom.</div></div></div>
+        <div class="tp-panel-intro">Idea carried across all Phase 3 channels: <strong>"68% of churned accounts showed no meaningful usage drop in the 90 days before cancellation. They didn't stop logging in. They lost the internal champion."</strong> This data lands now, on a cracked belief, which is why it sticks here but would have bounced in Phase 1.</div>
+        <div class="tp-item"><div class="tp-item-icon">📝</div><div><div class="tp-item-name">LinkedIn thought leadership</div><div class="tp-item-time">Weeks 8–10</div><div class="tp-item-how">Publish the "Your CS team is tracking the wrong metric" post, authored by a company leader or CS practitioner. Frame Usage vs Champion in Seat as the wrong metric vs right metric. Product mentioned once in comments only.</div></div></div>
+        <div class="tp-item"><div class="tp-item-icon">📊</div><div><div class="tp-item-name">Benchmark report</div><div class="tp-item-time">Weeks 9–11</div><div class="tp-item-how">Gate a 4-page data brief showing usage-vs-champion churn divergence. The 68% stat gives it credibility and a reason to share internally with CFO or CRO. Product intro appears on the final page, naturally earned.</div></div></div>
+        <div class="tp-item"><div class="tp-item-icon">📱</div><div><div class="tp-item-name">Paid dark social</div><div class="tp-item-time">Weeks 8–12</div><div class="tp-item-how">Retarget CS leader communities on LinkedIn with the "wrong metric" framing as ad creative, no product branding on the first ad. Second ad CTA: the diagnostic tool. Frequency across contexts makes the message feel like received wisdom.</div></div></div>
       </div>
     </div>
 
@@ -601,12 +582,12 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div class="field">
           <label class="field-label">Campaign sequence (editable)</label>
           <div class="editable-area" contenteditable="true">
-            <p><strong>Phase 1 — Open the blind spot (NOVELTY)</strong></p>
+            <p><strong>Phase 1: Open the blind spot (NOVELTY)</strong></p>
             <p>Introduce the 18-month champion tenure gap. No product mention. Touchpoints: Email nurture, Webinar, SEO landing page.</p><br>
-            <p><strong>Phase 2 — Make it personally confrontable (REFLECTION)</strong></p>
+            <p><strong>Phase 2: Make it personally confrontable (REFLECTION)</strong></p>
             <p>Surface the gap between what they think they know and what they actually know. Touchpoints: CS peer community, Executive roundtable, Interactive diagnostic.</p><br>
-            <p><strong>Phase 3 — Deliver the data verdict (DISFLUENCY)</strong></p>
-            <p>Land the 2.3× stat on a cracked belief. Product appears naturally. Touchpoints: LinkedIn thought leadership, Benchmark report, Paid dark social.</p>
+            <p><strong>Phase 3: Deliver the data verdict (DISFLUENCY)</strong></p>
+            <p>Land the 68% stat on a cracked belief. Usage looks stable, but customers still churn. Product appears naturally. Touchpoints: LinkedIn thought leadership, Benchmark report, Paid dark social.</p>
           </div>
         </div>
         <div class="btn-row" style="margin-top:10px">
@@ -618,7 +599,7 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
         <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--text-secondary);font-weight:600;margin-bottom:6px">Revision history</div>
         <div class="revision-item">
           <div class="revision-dot"></div>
-          <div class="revision-text">v1 — Initial strategy generated</div>
+          <div class="revision-text">v1: Initial strategy generated</div>
           <div class="revision-current">Current</div>
         </div>
       </div>
@@ -632,8 +613,6 @@ body{font-family:var(--sans);background:var(--bg);color:var(--text);min-height:1
 </div>
 
 <script>
-// Steps 0-4 = marketer input (hot pink dot)
-// Steps 5-7 = AI output (black dot)
 const AI_STEPS = new Set([5, 6, 7]);
 const STEPS = ['ICP','Product','Campaign','Data','Your Company','Belief','Cracks','Strategy'];
 let current = 0;
